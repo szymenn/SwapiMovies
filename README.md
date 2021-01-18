@@ -22,6 +22,6 @@ Then in main directory build and run docker images using docker compose: <br />
 
 `docker-compose up --build` <br />
 
-To use application navigate to `http://localhost:5000/`
+To use application navigate to http://localhost:5000/
 
 
