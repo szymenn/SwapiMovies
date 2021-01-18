@@ -24,4 +24,6 @@ Then in main directory build and run docker images using docker compose: <br />
 
 To use application navigate to http://localhost:5000/
 
+To stop application simply click CTRL+C 
+
 
