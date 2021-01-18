@@ -6,6 +6,7 @@ COPY ./SwapiMovies.sln ./ ./
 COPY ./SwapiMovies.Mvc/SwapiMovies.Mvc.csproj ./app/SwapiMovies.Mvc/SwapiMovies.Mvc.csproj
 COPY ./SwapiMovies.Core/SwapiMovies.Core.csproj ./app/SwapiMovies/SwapiMovies.Core.csproj
 COPY ./SwapiMovies.Infrastructure/SwapiMovies.Infrastructure.csproj ./app/SwapiMovies.Infrastructure/SwapiMovies.Infrastructure.csproj
+COPY ./SwapiMovies.Tests/SwapiMovies.Tests.csproj ./app/SwapiMovies.Tests/SwapiMovies.Tests.csproj
 
 RUN dotnet restore
 
