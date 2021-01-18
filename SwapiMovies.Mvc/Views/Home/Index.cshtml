@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SwapiMovies.Core.Dto.MovieDto>
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-url="@item.Url">Details</a> |
+                <a asp-action="Rate" asp-route-url="@item.Url">Rate</a>
+
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+version: '3.4'
+
+networks:
+  swapimovies-dev:
+    driver: bridge
+services:
+  swapimovies:
+    image: swapimovies:swapi
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      RatingDb: "Host=postgres_image;Database=RatingDb;Username=postgres;Password=123hehe"
+    networks:
+      - swapimovies-dev
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123hehe"
+      POSTGRES_DB: "postgres_image"
+    networks:
+      - swapimovies-dev
+volumes:
+  db_volume:
+         

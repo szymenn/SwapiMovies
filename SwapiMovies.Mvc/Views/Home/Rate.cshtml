@@ -1,0 +1,15 @@
+
+@model SwapiMovies.Core.Dto.RatingDto
+@{
+    ViewData["id"] = ViewData["id"];
+}
+<h2>Rate</h2>
+ 
+<form asp-controller="Home" asp-action="Rate"  method="post">
+ 
+    <label for="Value">Value</label>
+    
+    <input type="number" name="Value" />
+    <span asp-validation-for="Value" class="text-danger"></span>
+    <input type="submit" name="submit" />
+</form>
